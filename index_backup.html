@@ -135,7 +135,7 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
         }
 
         .nav-brand {
@@ -194,7 +194,6 @@
             padding: 8px;
             border: none;
             background: none;
-            margin-left: auto;
         }
 
         .nav-hamburger span {
@@ -707,61 +706,6 @@
             background: var(--color-amber);
         }
 
-        /* ===== CRASH STATS TABLE ===== */
-        .stats-table-wrapper {
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-sm);
-        }
-
-        .stats-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: var(--font-size-xs);
-            text-align: left;
-        }
-
-        .stats-table th,
-        .stats-table td {
-            padding: 10px;
-            border-bottom: 1px solid var(--color-border);
-            border-right: 1px solid var(--color-border);
-        }
-
-        .stats-table th:last-child,
-        .stats-table td:last-child {
-            border-right: none;
-        }
-
-        .stats-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .stats-table th {
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--color-text-primary);
-            font-weight: 700;
-            line-height: 1.3;
-            vertical-align: middle;
-        }
-
-        .stats-table .text-center {
-            text-align: center;
-        }
-
-        .stats-table td {
-            color: var(--color-text-secondary);
-            vertical-align: middle;
-        }
-
-        .stats-table tbody tr:hover td {
-            background-color: rgba(99, 102, 241, 0.03);
-        }
-
-        .stats-table .total-row td {
-            font-weight: 700;
-            color: var(--color-text-primary);
-        }
-
         /* ===== MARKET EXAMPLES ===== */
         .market {
             background: var(--color-bg);
@@ -795,20 +739,6 @@
         .market-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-xl);
-        }
-
-        .market-card.glow-blue:hover {
-            box-shadow: 0 12px 32px rgba(14, 165, 233, 0.25);
-            border-color: rgba(14, 165, 233, 0.4);
-        }
-
-        .market-card-visual img {
-            transition: filter var(--transition-base), transform var(--transition-base);
-        }
-
-        .market-card.glow-blue:hover .market-card-visual img {
-            filter: drop-shadow(0 0 12px rgba(14, 165, 233, 0.6));
-            transform: scale(1.05);
         }
 
         .market-card-visual {
@@ -885,52 +815,6 @@
         }
 
         /* ===== FUTURE OUTLOOK ===== */
-        .future-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 48px;
-            align-items: start;
-        }
-
-        @media (max-width: 992px) {
-            .future-content-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .future-disclaimer-box {
-                position: static !important;
-                margin-top: 32px;
-            }
-        }
-
-        .future-disclaimer-box {
-            background: rgba(251, 191, 36, 0.05);
-            /* amber tint */
-            border: 1px solid rgba(251, 191, 36, 0.2);
-            border-left: 4px solid var(--color-amber);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            position: sticky;
-            top: 100px;
-            font-size: var(--font-size-sm);
-            line-height: 1.6;
-        }
-
-        .future-disclaimer-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--color-amber);
-            font-weight: 700;
-            margin-bottom: 16px;
-            font-size: var(--font-size-md);
-        }
-
-        .future-disclaimer-box p {
-            color: rgba(255, 255, 255, 0.75);
-            margin: 0;
-        }
-
         .future {
             background: var(--color-bg-dark);
             color: var(--color-text-inverse);
@@ -1079,10 +963,10 @@
 
         .footer-inner {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 16px;
+            flex-wrap: wrap;
+            gap: 24px;
         }
 
         .footer-brand {
@@ -1097,8 +981,8 @@
         .footer-info {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            text-align: center;
+            gap: 4px;
+            text-align: right;
         }
 
         .footer-info span {
@@ -1247,6 +1131,14 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
+            <a href="#home" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                RoboTransit
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#introduction">Introduction</a></li>
@@ -1281,8 +1173,8 @@
                     The Rise of <span class="gradient-text">Robotaxis</span> & Autonomous Vehicles
                 </h1>
                 <p class="hero-description">
-                    Exploring how self-driving technology is revolutionizing the transportation industry, and the
-                    roadmap towards the future large-scale adoption of robotaxis and autonomous vehicles.
+                    Exploring how self-driving technology is reshaping urban mobility, transforming the transportation
+                    industry, and redefining the way businesses think about logistics and commuting.
                 </p>
                 <div class="hero-actions">
                     <a href="#introduction" class="btn btn-primary">
@@ -1299,8 +1191,8 @@
                 </div>
                 <div class="hero-stats">
                     <div>
-                        <div class="hero-stat-value">$300-$400B</div>
-                        <div class="hero-stat-label">Projected Revenue by 2035</div>
+                        <div class="hero-stat-value">$1.7T</div>
+                        <div class="hero-stat-label">Projected Market by 2035</div>
                     </div>
                     <div>
                         <div class="hero-stat-value">94%</div>
@@ -1321,8 +1213,7 @@
             <div class="reveal">
                 <span class="section-label">Overview</span>
                 <h2 class="section-title">What Are Robotaxis?</h2>
-                <p class="section-subtitle">A look into the future reality of a taxi industry without steering wheels.
-                </p>
+                <p class="section-subtitle">A look into the future of the taxi industry without drivers.</p>
             </div>
             <div class="intro-grid">
                 <div class="intro-visual reveal">
@@ -1352,29 +1243,26 @@
                             <span class="check-icon"><svg viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5" />
                                 </svg></span>
-                            <span>Like legacy services such as Uber and Lyft, users order rides through a mobile
-                                app.</span>
+                            <span>Passengers book rides through a mobile app, just like traditional ride-hailing
+                                services</span>
                         </li>
                         <li>
                             <span class="check-icon"><svg viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5" />
                                 </svg></span>
-                            <span>Vehicles are equiped with sensors, cameras, and artificial intelignece, which
-                                eliminates the need for present human drivers</span>
+                            <span>Vehicles use sensors, cameras, and AI to navigate — no human driver needed</span>
                         </li>
                         <li>
                             <span class="check-icon"><svg viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5" />
                                 </svg></span>
-                            <span>Companies such as Waymo and Zoox control fleets of robotaxis.</span>
+                            <span>Operated as managed fleets by companies like Waymo and Cruise</span>
                         </li>
                         <li>
                             <span class="check-icon"><svg viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5" />
                                 </svg></span>
-                            <span>Early stage pilot programs already in deployment, currently available to users in
-                                select cities
-                                across the globe.</span>
+                            <span>Already serving real passengers in cities like San Francisco and Phoenix</span>
                         </li>
                     </ul>
                 </div>
@@ -1423,12 +1311,12 @@
                     <h3>Advantages</h3>
                     <p>Key benefits that autonomous vehicles bring to the transportation sector.</p>
                     <ul>
-                        <li>Enhanced safety - 94% of crashes are a result of human error.</li>
-                        <li>Significantly reduced travel expenses by eliminating the cost of human drivers.</li>
-                        <li>Increased efficiency through optimized routes resulting in reduced traffic congestion.
+                        <li>Significantly reduced traffic accidents by eliminating human error, which accounts for
+                            approximately 94% of all crashes</li>
+                        <li>24/7 operational capability without driver fatigue, breaks, or shift changes</li>
+                        <li>Optimized routing and driving patterns lead to lower fuel consumption and reduced emissions
                         </li>
-                        <li>Increased accessibility for those who suffer from social anxiety that may otherwise avoid
-                            taking a taxi or digital ride-hailing service due to the human driver component.</li>
+                        <li>Improved mobility access for elderly, disabled, and underserved communities</li>
                     </ul>
                 </div>
                 <!-- Disadvantages -->
@@ -1442,81 +1330,59 @@
                         </svg>
                     </div>
                     <h3>Disadvantages</h3>
-                    <p>Challenges and risks that the industry must take into account prior to large-scale adoption.</p>
+                    <p>Challenges and risks that the industry must address for widespread adoption.</p>
                     <ul>
-                        <li>Current large-scale adoption remains largely impractical today, with Level 4 AVs frequently
-                            requiring human intervention in cases of unexpected hazards or edge cases. </li>
-                        <li>Older age individuals perceive robotaxis as “inferior drivers”, believing their driving or
-                            that of humans in general to be superior to a robot. </li>
-                        <li>Responsibility of accidents shifts to remote human workers, which may result in hazardous
-                            situations in the event of an overwhelmed employee.</li>
-                        <li>As responsibility shifts, the legal system may find it difficult to assign liability in the
-                            event of an accident.
+                        <li>Potential displacement of millions of professional drivers in trucking, taxi, and delivery
+                            sectors</li>
+                        <li>Cybersecurity vulnerabilities — connected vehicles could become targets for hacking or data
+                            theft</li>
+                        <li>Difficulty handling unpredictable scenarios such as construction zones, severe weather, or
+                            erratic pedestrians</li>
+                        <li>Complex liability questions: who is at fault when an autonomous vehicle causes an accident?
                         </li>
                     </ul>
                 </div>
-                <!-- Crash Data Table (Replacing Benefits for Managers) -->
-                <div class="impact-card impact-card--benefits reveal" style="grid-column: 1 / -1;">
+                <!-- Benefits for Managers -->
+                <div class="impact-card impact-card--benefits reveal">
                     <div class="impact-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="20" x2="12" y2="10" />
-                            <line x1="18" y1="20" x2="18" y2="4" />
-                            <line x1="6" y1="20" x2="6" y2="14" />
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <line x1="20" y1="8" x2="20" y2="14" />
+                            <line x1="23" y1="11" x2="17" y2="11" />
                         </svg>
                     </div>
-                    <h3>Estimated Critical Reasons for Crashes</h3>
-                    <p>Analysis of crash causations underscoring the necessity for autonomous vehicles.</p>
-
-                    <div class="stats-table-wrapper" style="margin-top: 20px; overflow-x: auto;">
-                        <table class="stats-table">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2">Critical Reason<br>Attributed to</th>
-                                    <th colspan="2" class="text-center">Estimated</th>
-                                </tr>
-                                <tr>
-                                    <th>Number</th>
-                                    <th>Percentage*<br>± 95% conf. limits</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Drivers</td>
-                                    <td>2,046,000</td>
-                                    <td>94% ±2.2%</td>
-                                </tr>
-                                <tr>
-                                    <td>Vehicles</td>
-                                    <td>44,000</td>
-                                    <td>2% ±0.7%</td>
-                                </tr>
-                                <tr>
-                                    <td>Environment</td>
-                                    <td>52,000</td>
-                                    <td>2% ±1.3%</td>
-                                </tr>
-                                <tr>
-                                    <td>Unknown Critical Reasons</td>
-                                    <td>47,000</td>
-                                    <td>2% ±1.4%</td>
-                                </tr>
-                                <tr class="total-row">
-                                    <td>Total</td>
-                                    <td>2,189,000</td>
-                                    <td>100%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p style="font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: 16px;">
-                        Source: <a href="https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812506" target="_blank"
-                            rel="noopener"
-                            style="color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px;">NHTSA
-                            Crash Causation Survey</a>
-                    </p>
+                    <h3>Benefits for Business Managers</h3>
+                    <p>Strategic advantages that make AVs attractive for business operations.</p>
+                    <ul>
+                        <li>Lower long-term operational costs by eliminating driver salaries, benefits, and training
+                            expenses</li>
+                        <li>Consistent, predictable service quality without variability from human performance</li>
+                        <li>Real-time fleet data and analytics for better decision-making and route optimization</li>
+                        <li>Ability to scale operations without the constraints of hiring and managing human drivers
+                        </li>
+                    </ul>
                 </div>
-
+                <!-- Costs -->
+                <div class="impact-card impact-card--costs reveal">
+                    <div class="impact-card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3>Costs & Investment</h3>
+                    <p>Financial considerations for businesses looking to adopt autonomous technology.</p>
+                    <ul>
+                        <li>High upfront R&D and vehicle costs — sensor suites alone can cost tens of thousands of
+                            dollars per vehicle</li>
+                        <li>Ongoing investment in HD mapping, software updates, and remote monitoring infrastructure
+                        </li>
+                        <li>Regulatory compliance costs including safety certifications, insurance, and legal fees</li>
+                        <li>Significant spending required for public trust campaigns and community engagement programs
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -1527,12 +1393,12 @@
             <div class="market-header reveal">
                 <span class="section-label">Market Leaders</span>
                 <h2 class="section-title">Who's Building the Future?</h2>
-                <p class="section-subtitle">The companies and products at the forefront of large-scale robotaxi
-                    commercialization.</p>
+                <p class="section-subtitle">The companies and products at the forefront of commercial autonomous vehicle
+                    deployment.</p>
             </div>
             <div class="market-cards">
                 <!-- Waymo -->
-                <a href="https://waymo.com/rides/" target="_blank" class="market-card glow-blue reveal">
+                <div class="market-card reveal">
                     <div class="market-card-visual"
                         style="background: #ffffff; padding: 32px; border-bottom: 1px solid var(--color-border);">
                         <img src="waymo.png" alt="Waymo Logo"
@@ -1551,9 +1417,9 @@
                         <span class="market-card-chip">Multi-City</span>
                         <span class="market-card-chip">Fully Driverless</span>
                     </div>
-                </a>
+                </div>
                 <!-- Zoox -->
-                <a href="https://zoox.com/" target="_blank" class="market-card glow-blue reveal">
+                <div class="market-card reveal">
                     <div class="market-card-visual"
                         style="background: #ffffff; padding: 32px; border-bottom: 1px solid var(--color-border);">
                         <img src="zoox logo.png" alt="Zoox Logo"
@@ -1573,7 +1439,7 @@
                         <span class="market-card-chip">Bidirectional</span>
                         <span class="market-card-chip">Testing Phase</span>
                     </div>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -1585,70 +1451,44 @@
             <div class="future-header reveal">
                 <span class="section-label"
                     style="background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.2);">Conclusion</span>
-                <h2 class="section-title">Timeline of Level 4 Use Cases</h2>
-                <p class="section-subtitle">Based on McKinsey’s survey asking global decision makers their expected year
-                    of mass deployment, averaged across
-                    multiple world regions (Europe, North America, China, Asia-Pacific).</p>
+                <h2 class="section-title">The Road Ahead</h2>
+                <p class="section-subtitle">Autonomous vehicles are not a question of "if" — they are a question of "how
+                    fast." Here's what the trajectory looks like.</p>
             </div>
-            <div class="future-content-wrapper">
-                <div class="future-timeline" style="margin: 0;">
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2028 Estimate</div>
-                        <h3>Level 3 Highway Pilot (Consumer Vehicles, up to 120km/hr)</h3>
-                        <p>Conditionaly automated highway pilot systems allowing speeds up to 120 km/h are expected to
-                            see
-                            mass
-                            deployment, sparking the transition to a hands-free driving experience.</p>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2029 Estimate</div>
-                        <h3>Driverless on Highway, Hub to Hub (Trucks)</h3>
-                        <p>The adoption of fully driverless trucks on select hub-to-hub highway routes is expected to
-                            reach
-                            mass deployment, paving the way for full urban trucking in the coming years.</p>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2030 Estimate</div>
-                        <h3>Level 4 or Level 5 Robotaxi in Geofenced Urban Areas</h3>
-                        <p>Completely driverless taxi services will reach mass deployment, revolutionizing the way we
-                            look
-                            at ride-hailing services.</p>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2032 Estimate</div>
-                        <h3>Level 4 Urban Pilot (Consumer Vehicles) & Full Driverless Trucks</h3>
-                        <p>Increased autonomous capabilities reach the market, allowing for consumers and trucking
-                            companies
-                            to experience the benefits of high automation. </p>
-                    </div>
-                    <p style="font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: 24px;">
-                        Source:
-                        <a href="https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/future-of-autonomous-vehicles-industry"
-                            target="_blank" rel="noopener"
-                            style="color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px;">McKinsey
-                            Center for Future Mobility</a>, 2025 estimate.
+            <div class="future-timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">Near-Term (2025–2027)</div>
+                    <h3>Expanding Geofenced Operations</h3>
+                    <p>Robotaxi services will continue expanding city by city into carefully mapped, geofenced areas.
+                        Expect Waymo to enter additional major U.S. metros, while competitors ramp up testing.
+                        Regulatory frameworks will begin to standardize across states.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">Mid-Term (2027–2030)</div>
+                    <h3>Mainstream Urban Adoption</h3>
+                    <p>As costs decrease and public trust grows, robotaxis will become a common sight in major cities.
+                        Fleet operators will compete on price with traditional ride-hailing, and autonomous deliveries
+                        will become standard. Insurance and liability law will catch up to the technology.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">Long-Term (2030–2040)</div>
+                    <h3>Reshaping Urban Infrastructure</h3>
+                    <p>Cities will begin redesigning roads, parking, and transit systems around autonomous fleets. Car
+                        ownership in urban areas will decline dramatically. The transportation industry will have
+                        fundamentally shifted from a driver-centric model to a technology and fleet-management model.
                     </p>
                 </div>
-
-                <!-- Skepticism Disclaimer Box -->
-                <div class="future-disclaimer-box reveal" style="animation-delay: 0.2s;">
-                    <div class="future-disclaimer-header">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                            <line x1="12" y1="9" x2="12" y2="13" />
-                            <line x1="12" y1="17" x2="12.01" y2="17" />
-                        </svg>
-                        Valid Skepticism
-                    </div>
-                    <p>These projections can write a completely different narrative since the 2030 figure is a 1-year
-                        setback from the original survey taken in 2023 that projected large-scale adoption by 2029.
-                        (Kelkar et al., 2026).</p>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">The Bottom Line</div>
+                    <h3>A Definitive Shift Is Underway</h3>
+                    <p>Autonomous vehicles represent one of the most consequential technological shifts of the 21st
+                        century. While the path to full autonomy will be gradual and uneven, the direction is clear:
+                        self-driving technology will fundamentally transform how people and goods move. For businesses,
+                        the question is not whether to prepare, but how quickly to act.</p>
                 </div>
             </div>
         </div>
@@ -1670,29 +1510,15 @@
                         rel="noopener">https://www.nhtsa.gov/technology-innovation/automated-vehicles-safety</a>
                 </li>
                 <li>
-                    National Highway Traffic Safety Administration. (2018). <em>Critical Reasons for Crashes
-                        Investigated in the National Motor Vehicle Crash Causation Survey.</em> NHTSA. <a
-                        href="https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812506" target="_blank"
-                        rel="noopener">https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812506</a>
-                </li>
-                <li>
                     Waymo. (2024). <em>Waymo — Ride with Waymo.</em> Waymo LLC. <a href="https://waymo.com/waymo-one/"
                         target="_blank" rel="noopener">https://waymo.com/waymo-one/</a>
                 </li>
-
                 <li>
                     McKinsey & Company. (2023). <em>Autonomous driving's future: Convenient and connected.</em> McKinsey
                     Center for Future Mobility. <a
                         href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected"
                         target="_blank"
-                        rel="noopener">https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected</a>
-                </li>
-                <li>
-                    McKinsey & Company. (2026). <em>Future of autonomous vehicles industry.</em> McKinsey Center for
-                    Future Mobility. <a
-                        href="https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/future-of-autonomous-vehicles-industry"
-                        target="_blank"
-                        rel="noopener">https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/future-of-autonomous-vehicles-industry</a>
+                        rel="noopener">https://www.mckinsey.com/industries/automotive-and-assembly/our-insights</a>
                 </li>
                 <li>
                     SAE International. (2021). <em>Taxonomy and Definitions for Terms Related to Driving Automation
@@ -1706,7 +1532,10 @@
                         target="_blank"
                         rel="noopener">https://www.theverge.com/2023/10/26/23934413/cruise-driverless-operations-suspended</a>
                 </li>
-
+                <li>
+                    Tesla, Inc. (2024). <em>We, Robot — Tesla Robotaxi Reveal.</em> Tesla. <a
+                        href="https://www.tesla.com" target="_blank" rel="noopener">https://www.tesla.com</a>
+                </li>
                 <li>
                     Zoox. (2024). <em>Zoox — Autonomous Mobility.</em> Zoox, Inc. (Amazon). <a href="https://zoox.com"
                         target="_blank" rel="noopener">https://zoox.com</a>
@@ -1731,13 +1560,21 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="nav-brand-icon">
+                        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    RoboTransit — BUS 237
+                </div>
                 <div class="footer-info">
-                    <span>Tutorial E100/E105&ensp;|&ensp;TA: Phineas Tran</span>
-                    <span>Group Members: Jayden Regnier, Luka Slavnic, Kian Wu</span>
+                    <span>Tutorial # [Insert]&ensp;|&ensp;Group # [Insert]</span>
+                    <span>Group Members: [Names]</span>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>2026 BUS 237 Business Technology Project.</p>
+                <p>&copy; 2026 BUS 237 Business Technology Project. All rights reserved.</p>
             </div>
         </div>
     </footer>
